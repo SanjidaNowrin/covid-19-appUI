@@ -16,13 +16,7 @@ export default function TopSheet() {
         <SimpleLineIcons name="bell" size={24} color="white" />
       </View>
 
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <View style={styles.textImage}>
         <Text preset="h1" style={{ marginTop: 20 }}>
           Covid -19
         </Text>
@@ -45,13 +39,7 @@ export default function TopSheet() {
         </Text>
       </View>
 
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginTop: 20,
-        }}
-      >
+      <View style={styles.contact}>
         <Pressable style={styles.pressCall}>
           <Ionicons name="call" size={24} color="white" />
           <Text style={{ marginLeft: 10 }}>Call Now</Text>
@@ -68,15 +56,20 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.blue,
     paddingTop: 50,
-    height: "50%",
-    borderBottomRightRadius: 30,
-    borderBottomLeftRadius: 30,
+    height: "45%",
+    borderBottomRightRadius: 35,
+    borderBottomLeftRadius: 35,
     paddingHorizontal: 20,
   },
   icons: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: spacing[4],
+  },
+  textImage: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   rightBox: {
     flexDirection: "row",
@@ -86,6 +79,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: spacing[1],
     borderRadius: 30,
+  },
+  contact: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 20,
   },
   pressCall: {
     flexDirection: "row",
